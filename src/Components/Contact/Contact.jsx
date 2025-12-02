@@ -2,7 +2,8 @@ import { Box, Button, Stack, Typography } from '@mui/material'
 import React from 'react'
 import me_img from '../../assets/resources/me.png'
 
-export default function Hero() {
+
+export default function Contact() {
   return (
     <>
       {/* 📱 MOBILE : texte → image → boutons */}
@@ -18,21 +19,11 @@ export default function Hero() {
         {/* 1️⃣ TEXTE */}
         <Box sx={{ width: '100%', textAlign: 'start', mt: 3, px: 2 }}>
           <Typography variant='h3' sx={{ fontFamily: 'inter', fontWeight: '900' }}>
-            Full stack web Developer
+            Nice to meet
           </Typography>
           <Typography sx={{ color: '#777272', fontWeight: '400', mt: 3}}>
-            I'm Abla Victoire Agboli. <br />
-            I create web experiences that hit hard and stand out.
+            Located in Canada. Online - near you <br />
           </Typography>
-        </Box>
-
-        {/* 2️⃣ IMAGE */}
-        <Box sx={{ width: '100%', px: 2, }}>
-          <img
-            src={me_img}
-            style={{ width: '100%', height: 'auto', objectFit: 'cover',height:'40vh' }}
-          />
-        </Box>
 
         {/* 3️⃣ BUTTONS */}
         <Box sx={{ width: '100%',px: 2, mb: 4 ,
@@ -80,20 +71,18 @@ export default function Hero() {
             </Typography>
             </Button>
 
-          <Button variant="text" sx={{ padding: 0, mt: 1.5 }}>
-            <Typography
-              sx={{
-                color: '#ff008b',
-                fontSize: '35px',
-                fontFamily: 'inter',
-                fontWeight: '800',
-                textTransform: 'none',
-              }}
-            >
-              Portfolio
-            </Typography>
-          </Button>
         </Box>
+
+        </Box>
+
+        {/* 2️⃣ IMAGE */}
+        <Box sx={{ width: '100%', px: 2, }}>
+          <img
+            src={me_img}
+            style={{ width: '100%', height: 'auto', objectFit: 'cover',height:'40vh' }}
+          />
+        </Box>
+
       </Stack>
 
       {/* 🖥 DESKTOP : [ image ] [ texte + boutons ] */}
