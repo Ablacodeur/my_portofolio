@@ -4,7 +4,7 @@ import React from 'react'
 export default function Works() {
   return (
     <Box sx={{ height:'100vh',padding:'55px' }}>
-        <Typography variant="h1"sx={{ fontSize:'155px',fontWeight:'550'}}>Works.</Typography>
+        <Typography variant="h1"sx={{ fontSize:{xs:'70px',md:'155px'},fontWeight:'550'}}>Works.</Typography>
         <Stack sx={{ height:'70vh',justifyContent:'space-around'}}>
             <Box sx={{ display:'flex',justifyContent:'space-between',height:'15%'  }}>
                 <Typography sx={{ fontSize:'60px',fontFamily:'Great Vibes',padding:'0' }}>001</Typography>

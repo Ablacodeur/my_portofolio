@@ -1,15 +1,15 @@
 import { Box, Button } from '@mui/material'
 import React from 'react'
-import my_logo from '../../assets/resources/logo.png'
+import my_logo from '../../assets/resources/logo3.png'
 
 export default function Navbar() {
   return (
-    <Box sx={{ width: "100%", top: 0}}>
+    <Box sx={{ width: "100%", top: 0,backgroundColor:'white',height:'10vh'}}>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           {/* LOGO */}
           <a className="navbar-brand fw-bold" href="/">
-            <img src={my_logo} style={{ width: "110px", height: "auto" }} />
+            <img src={my_logo} style={{ width: "90px", height: "auto" }} />
           </a>
 
           {/* Bouton hamburger visible sur petits écrans */}
@@ -37,65 +37,42 @@ export default function Navbar() {
                 variant="text"
                 sx={{
                   height: "45px",
-                  fontWeight: "bold",
+                  
                   color: "black",
                   width: { xs: "100%", lg: "auto" },
                 }}
               >
-               [ About me ]
+               Home 
               </Button>
               <Button
                 variant="text"
                 sx={{
                   height: "45px",
-                  fontWeight: "bold",
+                  
                   color: "black",
                   width: { xs: "100%", lg: "auto" },
                 }}
               >
-               [ About me ]
+               About 
               </Button>
               <Button
                 variant="text"
                 sx={{
                   height: "45px",
-                  fontWeight: "bold",
+                  
                   color: "black",
                   width: { xs: "100%", lg: "auto" },
                 }}
               >
-               [ About me ]
+               Works
               </Button>
-              <Button
-                variant="text"
-                sx={{
-                  height: "45px",
-                  fontWeight: "bold",
-                  color: "black",
-                  width: { xs: "100%", lg: "auto" },
-                }}
-              >
-               [ About me ]
-              </Button>
-
-              <Button
-                variant="text"
-                sx={{
-                  height: "45px",
-                  fontWeight: "bold",
-                  color: "black",
-                  width: { xs: "100%", lg: "auto" },
-                }}
-              >
-               [ About me ]
-              </Button>
-
 
             </div>
           </div>
         </div>
       </nav>
     </Box>
+
 
   )
 }

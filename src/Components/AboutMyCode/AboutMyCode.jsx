@@ -1,10 +1,57 @@
 import { Box, Stack, Typography } from '@mui/material'
-import React from 'react'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutMyCode() {
+
+    
+  const test1 = useRef(null);
+  const test2 = useRef(null);
+  const test3 = useRef(null);
+  const test4 = useRef(null);
+  const test5 = useRef(null);
+
+  useLayoutEffect(() => {
+
+    //  Fonction  pour animer un test
+    const animateTest = (ref, fromLeft = true) => {
+      gsap.fromTo(
+        ref.current,
+        {
+          autoAlpha: 0,
+          x: fromLeft ? -50 : 50,   // TRUE → gauche, FALSE → droite
+        },
+        {
+          autoAlpha: 1,
+          x: 0,
+          duration: 1.5,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play reverse play reverse",
+          }
+        }
+      );
+    };
+
+    // On anime chaque test
+    animateTest(test1, true);   // test 1 : gauche → droite
+    animateTest(test2, false);  // test 2 : droite → gauche
+    animateTest(test3, true);   // test 3 : gauche → droite
+    animateTest(test4, false);  // test 4 : droite → gauche
+    animateTest(test5, true);   // test 5 : gauche → droite
+
+  }, []);
+
+
   return (
-    <Box sx={{ backgroundColor:'#000000',color:'white'}}>
-        <Stack sx={{ height:'100vh',display:'flex',alignItems:'center',justifyContent:'center' }}> 
+    <Box  sx={{ backgroundColor:'#000000',color:'white',overflow: "hidden"}}>
+        <Stack ref={test1} sx={{ height:'100vh',display:'flex',alignItems:'center',justifyContent:'center',margin:'5%' }}> 
             <Typography
             variant="h2"
             sx={{
@@ -31,7 +78,7 @@ export default function AboutMyCode() {
             </Typography>
         </Stack>
 
-        <Stack sx={{ height:'100vh',display:'flex',alignItems:'start',justifyContent:'center' }}> 
+        <Stack ref={test2} sx={{ height:'100vh',display:'flex',alignItems:'start',justifyContent:'center' ,margin:'5%'}}> 
             <Typography
             variant="h2"
             sx={{
@@ -58,7 +105,7 @@ export default function AboutMyCode() {
             </Typography>
         </Stack>
 
-        <Stack sx={{ height:'100vh',display:'flex',alignItems:'start',justifyContent:'center' }}> 
+        <Stack ref={test3} sx={{ height:'100vh',display:'flex',alignItems:'start',justifyContent:'center',margin:'5%' }}> 
             <Typography
             variant="h2"
             sx={{
@@ -84,7 +131,7 @@ export default function AboutMyCode() {
             principles.
             </Typography>
         </Stack>
-        <Stack sx={{ height:'100vh',display:'flex',alignItems:'start',justifyContent:'center' }}> 
+        <Stack ref={test4} sx={{ height:'100vh',display:'flex',alignItems:'start',justifyContent:'center',margin:'5%' }}> 
             <Typography
             variant="h2"
             sx={{
@@ -110,7 +157,7 @@ export default function AboutMyCode() {
             to build<br /> modern and scalable applications.
             </Typography>
         </Stack>
-        <Stack sx={{ height:'100vh',display:'flex',alignItems:'start',justifyContent:'center' }}> 
+        <Stack ref={test5} sx={{ height:'50vh',display:'flex',alignItems:'start',justifyContent:'center' ,margin:'5%'}}> 
             <Typography
             variant="h2"
             sx={{

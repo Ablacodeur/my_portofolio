@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function My_Services() {
   return (
-    <Box sx={{ height:'100vh',marginTop:{xs:'10vh',md:'15vh'} ,backgroundColor:'#000000',color:'white',alignItems:'center',justifyContent:'center',display:'flex',flexDirection:'column'}}>
+    <Box sx={{ height:'100vh',width:'100vw',marginTop:{xs:'10vh',md:'15vh'} ,backgroundColor:'#000000',color:'white',alignItems:'center',justifyContent:'center',display:'flex',flexDirection:'column'}}>
         <Typography variant='h5' sx={{ fontSize: { xs: "25px", md: "45px",paddingTop:'5vh' } }}>
             My Services. My 
             <Box
@@ -21,8 +21,8 @@ export default function My_Services() {
             </Box>
         </Typography>
 
-        <Box sx={{ marginTop:{xs:'10vh',md:'20vh'},padding:'30px' }}>
-            <Typography variant='h3' sx={{ fontWeight:{xs:'150',md:'450'},fontFamily:'inter',padding:'15px'  }}>
+        <Box sx={{ marginTop:{xs:'10vh',md:'20vh'},padding:{xs:'15px',md:'30px'},margin:'5%'}}>
+            <Typography variant='h3' sx={{ fontWeight:{xs:'150',md:'450'},fontFamily:'inter',padding:'15px',fontSize: { xs: "25px", md: "45px"}   }}>
                 #JavaScript  {""}
                 #React {""}
                 #NodeJS {""}
