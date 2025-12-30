@@ -1,25 +1,140 @@
-import { Box, Button, Stack, Typography } from '@mui/material'
-import React from 'react'
-import me_img from '../../assets/resources/footerImage.png'
-
+import { Box, Button, Stack, Typography } from "@mui/material";
+import React from "react";
+import { Link } from "react-router-dom";
+import me_img from "../../assets/resources/me.png"
 
 export default function Contact() {
   return (
-    <Box sx={{ height:{xs:'60vh',md:'100vh'},margin:'10px',position:'absolute',display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column',width:'100vw',padding:{xs:'15px',md:'30px',overflow:'hidden'} }}>
-      <Typography variant='h1' sx={{ fontSize:{xs:'100px',md:'300px'} ,color:'#ff008b',fontFamily:'Corinthia',textAlign:'center',display:'flex',zIndex:'2',position:'relative'}}>Nice to meet</Typography>
-      <Box sx={{ display:'flex',justifyContent:'center',bottom:{xs:'70px',md:'150px'},position:'relative',height:{xs:'30vh',md:'60vh'},alignItems:'center',width:{xs:'250px',md:'550px'}}}>
-        <img src={me_img} style={{ height:'100%',width:'100%'}} />
-      </Box>
-      <Box sx={{textAlign:'center', alignItems:'center', display:'flex',justifyContent:'space-between',flexDirection:'row',backgroundColor:'black',padding:'5px',color:'white',width:'100vw',height:'15vh',overflow:'hidden'}}>
-        <Typography sx={{ fontSize:{xs:'15px',md:'23px'} }}>Linkedin</Typography>
-        <Typography sx={{ fontSize:{xs:'15px',md:'23px'} }}>Github</Typography>
-        <Typography sx={{ fontSize:{xs:'15px',md:'23px'} }}> Email</Typography>
-        <Typography sx={{ fontSize:{xs:'15px',md:'23px'} }}>Contact</Typography>
-      </Box>
-        <Box sx={{padding:'20px',width:'100vw',textAlign:'center'}}>
-        <Typography sx={{ fontSize:{xs:'12px',md:'20px'} }}>Located in Canada</Typography>
-      </Box>
+    <>
+    <Box
+      sx={{
+        padding: { xs: "40px 20px", md: "80px" },
+        borderTop: "1px solid #e0e0e0",
+        display:'flex',
+        justifyContent:'space-between',
+        flexDirection:{ xs: "column", md: "row" }
+      }}
+    >
+      <Stack
+        direction={{ xs: "row" }}
+        spacing={{ xs: 2, md: 6 }}
+        justifyContent="space-between"
+      >
+        {/* LINKS */}
+        <Box>
+          <Typography sx={{ fontWeight: 600, mb: 2 }}>LINKS</Typography>
+          {["Home", "Work", "About", "Services","Contact"].map((item) => (
+            <Typography
+              key={item}
+              sx={{
+                color: "#555",
+                cursor: "pointer",
+                mb: 1,
+                "&:hover": { color: "#000" },
+              }}
+            >
+              {item}
+            </Typography>
+          ))}
+        </Box>
+
+        {/* SOCIALS */}
+        <Box>
+          <Typography sx={{ fontWeight: 600, mb: 2 }}>SOCIALS</Typography>
+          {["Email", "LinkedIn", "WhatsApp", "GitHub","My CV"].map((item) => (
+            <Typography
+              key={item}
+              sx={{
+                color: "#555",
+                cursor: "pointer",
+                mb: 1,
+                "&:hover": { color: "#000" },
+              }}
+            >
+              {item}
+            </Typography>
+          ))}
+        </Box>
+
+        {/* LOCAL TIME */}
+        <Box>
+          <Typography sx={{ fontWeight: 600, mb: 2 }}>LOCAL TIME</Typography>
+          <Typography sx={{ color: "#555" }}>
+            Current time GMT+4
+          </Typography>
+        </Box>
+
+        {/* VERSION */}
+        <Box>
+          <Typography sx={{ fontWeight: 600, mb: 2 }}>VERSION</Typography>
+          <Typography sx={{ color: "#555" }}>
+            2025 ♾ Edition
+          </Typography>
+        </Box>
+      </Stack>
+      <Stack>
+        <Box sx={{ display: "flex", flexDirection: "row", gap: 1 }}>
+          
+          {/* Téléphone */}
+          <Button
+            component="a"
+            href="tel:+1514514514"
+            sx={{ justifyContent: "flex-start", textTransform: "none",textDecoration:'none',color:'black',borderColor:'black',borderRadius:'50px' }}
+            variant="outlined"
+            
+          >
+            <Typography>+1 514 514 514</Typography>
+          </Button>
+
+          {/* Email */}
+          <Button
+            component="a"
+            href="mailto:ablacodeur@gmail.com"
+            sx={{ justifyContent: "flex-start", textTransform: "none" ,color:'black',borderColor:'black',borderRadius:'50px' }}
+            variant="outlined"
+
+          >
+            <Typography>ablacodeur@gmail.com</Typography>
+          </Button>
+
+        </Box>
+      </Stack>
 
     </Box>
-  )
+<Box sx={{ textAlign: "center" }}>
+  {/* DESKTOP */}
+  <Typography
+    variant="h1"
+    sx={{
+      fontSize: { xs: "72px", md: "210px" },
+      display: { xs: "none", md: "flex" },
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "20px",
+    }}
+  >
+    ABLAC
+    <Box
+      component="img"
+      src={me_img}
+      alt="Abla Codeur"
+      sx={{
+        width: "130px",
+        height: "163px",
+        borderRadius: "50%",
+        border: "13px solid black",
+      }}
+    />
+    DEUR
+  </Typography>
+
+  {/* MOBILE */}
+  <Box sx={{ display: { xs: "inline-flex", md: "none" } }}>
+    <Typography sx={{ fontSize: "52px" }}>ABLACODEUR</Typography>
+
+
+  </Box>
+</Box>
+    </>
+  );
 }
