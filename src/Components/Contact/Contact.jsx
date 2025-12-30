@@ -6,6 +6,32 @@ import me_img from "../../assets/resources/me.png"
 export default function Contact() {
   return (
     <>
+              <Box
+            sx={{
+              position: "absolute",
+              right: 20,
+              Bottom: "15%",
+              transform: "translateY(50%) rotate(-90deg)",
+              transformOrigin: "right center",
+              display: { xs: "block" },
+              zIndex: 10,
+            }}
+          >
+            <Typography
+              sx={{
+                letterSpacing: 5,
+                fontSize: 12,
+                fontWeight: 500,
+                textTransform: "uppercase",
+                backgroundColor:'#ff008b',
+                padding:{xs:'2px',md:'5px'},
+                color:'white'
+              }}
+            >
+              BASE IN CANADA
+            </Typography>
+          </Box>
+
     <Box
       sx={{
         padding: { xs: "40px 20px", md: "80px" },
@@ -101,40 +127,39 @@ export default function Contact() {
       </Stack>
 
     </Box>
-<Box sx={{ textAlign: "center" }}>
-  {/* DESKTOP */}
-  <Typography
-    variant="h1"
-    sx={{
-      fontSize: { xs: "72px", md: "210px" },
-      display: { xs: "none", md: "flex" },
-      alignItems: "center",
-      justifyContent: "center",
-      gap: "20px",
-    }}
-  >
-    ABLAC
-    <Box
-      component="img"
-      src={me_img}
-      alt="Abla Codeur"
-      sx={{
-        width: "130px",
-        height: "163px",
-        borderRadius: "50%",
-        border: "13px solid black",
-      }}
-    />
-    DEUR
-  </Typography>
+    <Box sx={{ textAlign: "center" }}>
+      {/* DESKTOP */}
+      <Typography
+        variant="h1"
+        sx={{
+          fontSize: { xs: "72px", md: "210px" },
+          display: { xs: "none", md: "flex" },
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "20px",
+        }}
+      >
+        ABLAC
+        <Box
+          component="img"
+          src={me_img}
+          alt="Abla Codeur"
+          sx={{
+            width: "130px",
+            height: "163px",
+            borderRadius: "50%",
+            border: "13px solid black",
+          }}
+        />
+        DEUR
+      </Typography>
 
-  {/* MOBILE */}
-  <Box sx={{ display: { xs: "inline-flex", md: "none" } }}>
-    <Typography sx={{ fontSize: "52px" }}>ABLACODEUR</Typography>
-
-
-  </Box>
-</Box>
+      {/* MOBILE */}
+      <Box sx={{ display: { xs: "inline-flex", md: "none" } }}>
+        <Typography sx={{ fontSize: "52px" }}>ABLACODEUR</Typography>
+      </Box>
+    </Box>
+    
     </>
   );
 }
