@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 import me_img from "../../assets/resources/me.png"
 
 export default function Contact() {
+  const currentYear = new Date().getFullYear();
+  const montrealTime = new Date().toLocaleTimeString("en-CA", {
+  timeZone: "America/Toronto",
+  hour: "2-digit",
+  minute: "2-digit",
+});
+
   return (
     <>
               <Box
@@ -86,7 +93,7 @@ export default function Contact() {
         <Box>
           <Typography sx={{ fontWeight: 600, mb: 2 }}>LOCAL TIME</Typography>
           <Typography sx={{ color: "#555" }}>
-            Current time GMT+4
+          {montrealTime} UTC-5
           </Typography>
         </Box>
 
@@ -94,7 +101,7 @@ export default function Contact() {
         <Box>
           <Typography sx={{ fontWeight: 600, mb: 2 }}>VERSION</Typography>
           <Typography sx={{ color: "#555" }}>
-            2025 ♾ Edition
+            {currentYear} Edition
           </Typography>
         </Box>
       </Stack>
@@ -109,7 +116,7 @@ export default function Contact() {
             variant="outlined"
             
           >
-            <Typography>+1 514 514 514</Typography>
+            <Typography>+1 514 262 8032</Typography>
           </Button>
 
           {/* Email */}
