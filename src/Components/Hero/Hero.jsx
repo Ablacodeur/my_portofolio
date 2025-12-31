@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import BlobSpline from "../BlobSpline/BlobSpline";
 
-export default function Hero() {
+export default function Hero({ onReady }) {
   return (
     <Box
       sx={{
@@ -18,7 +18,7 @@ export default function Hero() {
           zIndex: 0,
         }}
       >
-        <BlobSpline />
+        <BlobSpline onReady={onReady} />
       </Box>
 
       {/* TEXTE PAR-DESSUS */}

@@ -64,7 +64,7 @@ export default function AboutMyCode() {
             <Box
                 component="span"
                 sx={{
-                color: "C",
+                color: "#ff008b",
                 fontFamily: "Great Vibes",
                 fontWeight: 200,
                 fontSize: { xs: "40px", md: "75px" }, 
