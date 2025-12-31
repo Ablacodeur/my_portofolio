@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutMyCode() {
 
-    
+  const test0 = useRef(null);
   const test1 = useRef(null);
   const test2 = useRef(null);
   const test3 = useRef(null);
@@ -22,17 +22,17 @@ export default function AboutMyCode() {
         ref.current,
         {
           autoAlpha: 0,
-          x: fromLeft ? -50 : 50,   // TRUE → gauche, FALSE → droite
+          x: fromLeft ? -80 : 80,   // TRUE → gauche, FALSE → droite
         },
         {
           autoAlpha: 1,
           x: 0,
-          duration: 1.5,
+          duration: 1.8,
           ease: "power3.out",
           scrollTrigger: {
             trigger: ref.current,
-            start: "top 80%",
-            end: "bottom 20%",
+            start: "top 60%",
+            end: "bottom 40%",
             toggleActions: "play reverse play reverse",
           }
         }
@@ -40,6 +40,7 @@ export default function AboutMyCode() {
     };
 
     // On anime chaque test
+    animateTest(test0, true);   
     animateTest(test1, true);   // test 1 : gauche → droite
     animateTest(test2, false);  // test 2 : droite → gauche
     animateTest(test3, true);   // test 3 : gauche → droite
@@ -50,8 +51,55 @@ export default function AboutMyCode() {
 
 
   return (
-    <Box  sx={{ backgroundColor:'#000000',color:'white',overflow: "hidden"}}>
-        <Stack ref={test1} sx={{ height:'100vh',display:'flex',alignItems:'center',justifyContent:'center',margin:'5%' }}> 
+    <Box sx={{ backgroundColor: "#000000", color: "white", overflow: "hidden" }}>
+      {/* SVG TOP WAVE */}
+            <Box
+                sx={{
+                width: "100%",
+                lineHeight: 0,
+                transform: "translateY(-1px)", // anti petite ligne blanche
+                }}
+            >
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 320"
+                preserveAspectRatio="none"
+                style={{ width: "100%", height: "160px", display: "block" }}
+                >
+                <path
+                    fill="#ff008b"
+                    fillOpacity="1"
+                        d="M0,0L120,16C240,32,480,64,720,64C960,64,1200,32,1320,16L1440,0L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"            />
+                </svg>
+            </Box>
+            <Stack ref={test0} sx={{ height:'80vh',display:'flex',alignItems:'center',justifyContent:'center',margin:'5%' }}> 
+            <Typography
+            variant="h2"
+            sx={{
+                fontWeight: 550,
+                fontSize: { xs: "20px", md: "45px" },
+                padding: "25px",
+            }}
+            >
+            I’m Abla, i build {" "}
+            <Box
+                component="span"
+                sx={{
+                color: "#ff008b",
+                fontFamily: "Great Vibes",
+                fontWeight: 200,
+                fontSize: { xs: "40px", md: "75px" }, 
+                px: 1,
+                display: "inline-block",
+                }}
+            >
+            web applications
+            </Box>{" "}
+           from concept to production.
+            </Typography>
+        </Stack>
+
+        <Stack ref={test1} sx={{ height:'80vh',display:'flex',alignItems:'center',justifyContent:'center',margin:'5%' }}> 
             <Typography
             variant="h2"
             sx={{
@@ -78,7 +126,7 @@ export default function AboutMyCode() {
             </Typography>
         </Stack>
 
-        <Stack ref={test2} sx={{ height:'100vh',display:'flex',alignItems:'start',justifyContent:'center' ,margin:'5%'}}> 
+        <Stack ref={test2} sx={{ height:'80vh',display:'flex',alignItems:'start',justifyContent:'center' ,margin:'5%'}}> 
             <Typography
             variant="h2"
             sx={{
@@ -105,7 +153,7 @@ export default function AboutMyCode() {
             </Typography>
         </Stack>
 
-        <Stack ref={test3} sx={{ height:'100vh',display:'flex',alignItems:'start',justifyContent:'center',margin:'5%' }}> 
+        <Stack ref={test3} sx={{ height:'80vh',display:'flex',alignItems:'start',justifyContent:'center',margin:'5%' }}> 
             <Typography
             variant="h2"
             sx={{
@@ -131,7 +179,7 @@ export default function AboutMyCode() {
             principles.
             </Typography>
         </Stack>
-        <Stack ref={test4} sx={{ height:'100vh',display:'flex',alignItems:'start',justifyContent:'center',margin:'5%' }}> 
+        <Stack ref={test4} sx={{ height:'80vh',display:'flex',alignItems:'start',justifyContent:'center',margin:'5%' }}> 
             <Typography
             variant="h2"
             sx={{
