@@ -3,6 +3,7 @@ import BlobSpline from "../BlobSpline/BlobSpline";
 
 export default function Hero({ onReady }) {
   return (
+    <section id="home">
     <Box
       sx={{
         position: "relative",
@@ -67,5 +68,6 @@ export default function Hero({ onReady }) {
         </Typography>
       </Box>
     </Box>
+    </section>
   );
 }

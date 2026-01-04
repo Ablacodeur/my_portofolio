@@ -3,6 +3,7 @@ import React from 'react'
 
 export default function My_Services() {
   return (
+    <section id='services'>
     <Box sx={{ height:'100vh',width:'100vw',marginTop:{xs:'10vh',md:'15vh'} ,backgroundColor:'#000000',color:'white',alignItems:'center',justifyContent:'center',display:'flex',flexDirection:'column'}}>
         <Typography variant='h5' sx={{ fontSize: { xs: "25px", md: "45px",paddingTop:'5vh' } }}>
             My Services. My 
@@ -39,5 +40,6 @@ export default function My_Services() {
         </Box>
        
     </Box>
+    </section>
   )
 }

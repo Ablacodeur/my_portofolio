@@ -13,6 +13,7 @@ export default function Works() {
 
 
   return (
+    <section id='work'>
     <Box sx={{ height:'',padding:'55px' }}>
         <Typography variant="h1"sx={{ fontSize:{xs:'70px',md:'155px'},fontWeight:'550'}}>Works.</Typography>
         <Stack sx={{ height:'',justifyContent:'space-around'}}>
@@ -203,5 +204,6 @@ export default function Works() {
         </Stack>
         
     </Box>
+    </section>
   )
 }

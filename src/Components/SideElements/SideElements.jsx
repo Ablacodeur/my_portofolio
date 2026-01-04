@@ -18,7 +18,7 @@ export default function SideElements() {
           flexDirection: "column",
           alignItems: "center",
           gap: 3,
-          zIndex: 10,
+          zIndex: 30,
         }}
       >
         {/* Barre verticale */}
@@ -33,15 +33,21 @@ export default function SideElements() {
         />
 
         {/* Icônes */}
-        <IconButton href="https://linkedin.com" target="_blank" size="small">
+        <IconButton
+          component="a"
+          href="https://www.linkedin.com/in/victoire-agboli"
+          target="_blank"
+          rel="noopener noreferrer"
+          size="small"
+          onClick={() => alert("i got a click")}
+        >
           <LinkedInIcon fontSize="small" />
         </IconButton>
-
-        <IconButton href="https://wa.me/123456789" target="_blank" size="small">
+        <IconButton href="https://wa.me/5142628032" target="_blank" size="small">
           <WhatsAppIcon fontSize="small" />
         </IconButton>
 
-        <IconButton href="https://github.com" target="_blank" size="small">
+        <IconButton href="https://github.com/ablacodeur" target="_blank" size="small">
           <GitHubIcon fontSize="small" />
         </IconButton>
       </Box>

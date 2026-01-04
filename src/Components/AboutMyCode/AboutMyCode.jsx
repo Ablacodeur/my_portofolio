@@ -51,6 +51,7 @@ export default function AboutMyCode() {
 
 
   return (
+    <section id="about">
     <Box sx={{ backgroundColor: "#000000", color: "white", overflow: "hidden" }}>
       {/* SVG TOP WAVE */}
             <Box
@@ -235,6 +236,7 @@ export default function AboutMyCode() {
         
        
     </Box>
+    </section>
   )
 }
 
