@@ -13,6 +13,8 @@ import workdemo5c from '../../assets/resources/work5c.png'
 import workdemo5 from '../../assets/resources/work5.png'
 import workdemo6c from '../../assets/resources/work6c.png'
 import workdemo6 from '../../assets/resources/work6.png'
+import workdemo7c from '../../assets/resources/work7c.png'
+import workdemo7 from '../../assets/resources/work7.png'
 
 
 
@@ -386,6 +388,7 @@ export default function Works() {
             {openSwiper && ( <hr />)}
             <Box sx={{ display:'flex',justifyContent:'space-between',flexDirection:'column'  }}>
                 <Box sx={{ display:'flex',justifyContent:'space-between',height:'15%',alignContent:'' }}>
+                
                     <Typography sx={{ fontSize:{xs:'30px',md:'60px'},fontFamily:'Great Vibes',padding:'0' }}>006</Typography>
                     <Box sx={{ padding:'0',display:'flex',flexDirection:'column',alignItems:'start',width:'40%' ,marginBottom:'50px'}}>
                         <Typography sx={{ fontSize:{xs:'25px',md:'60px'}}}>Weather App.</Typography>
@@ -453,8 +456,76 @@ export default function Works() {
                 )}
             </Box>
 
+            {openSwiper && ( <hr />)}
+            <Box sx={{ display:'flex',justifyContent:'space-between',flexDirection:'column'  }}>
+                <Box sx={{ display:'flex',justifyContent:'space-between',height:'15%',alignContent:'' }}>
+                
+                    <Typography sx={{ fontSize:{xs:'30px',md:'60px'},fontFamily:'Great Vibes',padding:'0' }}>007</Typography>
+                    <Box sx={{ padding:'0',display:'flex',flexDirection:'column',alignItems:'start',width:'40%' ,marginBottom:'50px'}}>
+                        <Typography sx={{ fontSize:{xs:'25px',md:'60px'}}}>Inside Space.</Typography>
+                        <Typography>Immersive web experience focused on space exploration, combining dynamic data, modern animations, and interactive UI to create a visually engaging digital environment.</Typography>
+                            <Button
+                            sx={{ padding: '0', color: "#ff008b" }}
+                            onClick={() =>
+                                setOpenSwiper(openSwiper === 7 ? null : 7)
+                            }
+                            >
+                            Explore
+                            </Button>
 
-            
+                    </Box>
+                </Box>
+                <hr />
+                {openSwiper===7 && (
+                    <Box sx={{ display:'flex',justifyContent:'space-between',height:'50vh',marginTop:'20px'}}>
+                        
+                        <Box sx={{ padding:'0',display:'flex',flexDirection:'column',width:'50%' }}>
+                            <Swiper
+                                direction="vertical"
+                                modules={[Autoplay]}
+                                pagination={{ clickable: true }}
+                                autoplay={{
+                                    delay: 500,
+                                    disableOnInteraction: false, // continue même si le user touche
+                                }}
+                                speed={2500} 
+                                loop={true} // boucle infinie important
+                                className="mySwiper"
+                                >
+                                <SwiperSlide><img style={{ width:'100%',height:"auto" ,overflow:'hidden',objectFit:'contain'}} src={workdemo7} /></SwiperSlide>
+                                <SwiperSlide><img style={{ width:'100%',height:"auto",overflow:'hidden',objectFit:'contain' }} src={workdemo7c} /></SwiperSlide>
+                            </Swiper>                    
+                        </Box>
+                        <Box sx={{ width:'40%',display:'flex',justifyContent:'space-between',flexDirection:'column'}}>
+                            <Box>
+                            <Typography variant='h6' sx={{ fontSize:'20px',fontFamily:'inter',padding:'0'}}>Technologies</Typography>
+                            <Typography variant='h7' sx={{ fontSize:'17px',fontFamily:'inter',padding:'0' }}>React · JavaScript · GSAP · Swiper.js</Typography>
+                            </Box>
+                            <Box>
+                            <Typography variant='h6' sx={{ fontSize:'20px',fontFamily:'inter',padding:'0'}}>Fonctionnalities</Typography>
+                            <Typography variant='h7' sx={{ fontSize:'17px',fontFamily:'inter',padding:'0' }}>
+                                            .Interactive animated sections
+                                            .Smooth scroll and transitions
+                                            .Swiper-based navigation
+                                            .Dynamic UI animations
+                                            .Space-themed visual experience
+                                            .Fully responsive layout
+                            </Typography>
+                            </Box>
+                            <Box>
+                            <a
+                                href="https://inside-space.vercel.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ textDecoration: "none", color: "#ff008b",fontSize:'25px' }}
+                            >
+                                Visit the site ↝
+                            </a>
+                            </Box>
+                        </Box>
+                    </Box>
+                )}
+            </Box>
 
 
         </Stack>

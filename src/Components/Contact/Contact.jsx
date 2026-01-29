@@ -16,7 +16,7 @@ export default function Contact() {
   { label: "LinkedIn", href: "https://www.linkedin.com/in/victoire-agboli" },
   { label: "WhatsApp", href: "https://wa.me/5142628032" }, 
   { label: "GitHub", href: "https://github.com/ablacodeur" },
-  { label: "My CV", href: "/ablacodeur-cv.rtf", download: true }
+  { label: "My CV", href: "/CV_Victoire_Agboli_FullStack_Canada.pdf", download: true }
 ];
 const navLinks = [
   { label: "Home", href: "#home" },
